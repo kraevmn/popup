@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <a href="#registration" class="popup__link">registration</a>
+
+
+    <div id="registration" class="popup">
+        <div class="popup__content">
+            <div class="popup__close-button popup__close"></div>
+            <div class="title_size_h2 title">Регистрация в ГородКвадратов</div>
+            <form action="" method="post">
+                <p class="create-ad-text text text_size_15">Тип аккаунта</p>
+                <div class="create-ad__wrapper">
+                    <input class="create-ad-type__input" type="radio" name="registration-type-account" value="1"
+                        id="registration-type-account-1" checked />
+                    <label for="registration-type-account-1"
+                        class="create-ad__radio text text_size_13 text_weight_bold">
+                        Собственник
+                    </label>
+
+                    <input class="create-ad-type__input" type="radio" name="registration-type-account" value="2"
+                        id="registration-type-account-2" />
+                    <label for="registration-type-account-2"
+                        class="create-ad__radio text text_size_13 text_weight_bold">
+                        Агент
+                    </label>
+
+                    <input class="create-ad-type__input" type="radio" name="registration-type-account" value="3"
+                        id="registration-type-account-3" />
+                    <label for="registration-type-account-3"
+                        class="create-ad__radio text text_size_13 text_weight_bold">
+                        Агентство
+                    </label>
+                </div>
+
+                <div class="create-ad__wrapper">
+                    <div class="popup_mr0 create-ad__textbox textbox">
+                        <input id="registrationName" class="textbox__input" type="text" name="registrationName" />
+                        <label for="registrationName" class="textbox__label">Ваше имя (напишем в объявлении)</label>
+                        <div id='nameError' class='popup__error text text_size_11'>Имя не должно быть пустым</div>
+                    </div>
+                    <div class="popup_mr0 create-ad__textbox textbox">
+                        <input id="registrationEmail" class="textbox__input" type="text" name="registrationEmail" />
+                        <label for="registrationEmail" class="textbox__label">E-mail</label>
+                        <div id='emailError' class='popup__error text text_size_11'>Ошибка в емайле</div>
+                    </div>
+                    <div class="popup_mr0 create-ad__textbox textbox">
+                        <input id="registrationTelephone" class="textbox__input" type="tel" name="registrationTelephone"
+                            placeholder="+7(___)___-__-__" />
+                        <label for="registrationTelephone" class="textbox__label">Ваш телефон</label>
+                        <div id='telError' class='popup__error text text_size_11'>Номер телефона уже занят</div>
+                    </div>
+
+                </div>
+
+                <button class="popup__button popup_size button button_primary" type="submit">Зарегистрироваться</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="checkEmail" class="popup">
+        <div class="popup__content">
+            <div class="popup__close-button popup__close"></div>
+            <div class="title_size_h2 title">Подтверждение e-mail</div>
+            <form action="" method="post">
+                <div class="popup__text text_size_16 text">На e-mail aewgergwegergerg@gmail.com мы отправили ссылку для
+                    подтверждения аккаунта. Перейдите по ней для завершения регистрации.</div>
+
+                <button class="popup__button popup_size button button_primary">Проверить почту</button>
+
+                <a class='popup__link popup__text_center text_size_14 popup__text' href="">Отправить ссылку заново</a>
+            </form>
+        </div>
+    </div>
+
+    <div id="forgotPassword" class="popup">
+        <div class="popup__content">
+            <div class="popup__close-button popup__close"></div>
+            <div class="title_size_h2 title">Забыли ваш пароль?</div>
+            <form action="" method="post">
+                <div class="popup__text text_size_16 text">Пожалуйста, введите свой e-mail, на который мы пришлем ссылку
+                    для восстановления пароля.</div>
+                <div class="popup_size create-ad__textbox textbox">
+                    <input id="forgotEmail" class="textbox__input" type="email" name="forgotEmail" />
+                    <label for="forgotEmail" class="textbox__label">E-mail</label>
+                </div>
+
+                <button class="popup__button popup_size button button_primary" type="submit">Сбросить пароль</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="checkEmailForgotPassword" class="popup">
+        <div class="popup__content">
+            <div class="popup__close-button popup__close"></div>
+            <div class="title_size_h2 title">Проверьте свою почту</div>
+            <form action="" method="post">
+                <div class="popup__text text_size_16 text">На e-mail dgsergesrherher@gmail.com мы отправили ссылку для
+                    сброса пароля</div>
+                <button class="popup__button popup_size button button_primary">Проверить почту</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="newPassword" class="popup">
+        <div class="popup__content">
+            <div class="popup__close-button popup__close"></div>
+            <div class="title_size_h2 title">Придумайте новый пароль</div>
+            <form action="" method="post">
+                <div class="popup__text text_size_16 text">Пожалуйста, введите свой новый пароль:</div>
+                <div class="create-ad__textbox textbox">
+                    <input id="newPassword" class="textbox__input" type="password" name="newPassword" />
+                    <label for="newPassword" class="textbox__label">Пароль</label>
+                </div>
+                <button class="popup__button popup_size button button_primary" type="submit">Проверить почту</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
